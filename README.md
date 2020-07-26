@@ -32,7 +32,7 @@ router.get("/authorize/growstocks", async (req, res) => {
     const ip = req.headers['cf-connecting-ip'] || req.headers['x-forwarded-for'] || req.connection.remoteAddress;
     
     /*
-        It is recommended to send the IP address to the GrowStocks Auth API to make the process more secure.
+        It is recommended to send the IP address to the GrowStocks Auth API when authorizing the user to make the process more secure.
     */
     let user = await auth.getUser(code, ip); 
     if(data.success == false) // Something went wrong while requesting on GrowStocks API
@@ -48,9 +48,6 @@ router.get("/", async (req, res) => {
 
     const code = get.user.code.in.database;
     
-    /*
-        It is recommended to send the IP address to the GrowStocks Auth API to make the process more secure.
-    */
     let user = await auth.getUser(code); 
     if(data.success == false) // Something went wrong while requesting on GrowStocks API
         return res.json(user); // Returns { success: false, response: <API RESPONSE> }
