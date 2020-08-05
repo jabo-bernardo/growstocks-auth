@@ -1,6 +1,6 @@
 {
   "name": "growstocks-auth",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "A simple API wrapper for GrowStocks API | Authorize your Growtopia website/app with GrowStocks!",
   "main": "index.js",
   "keywords": ["growstocks", "oauth", "growstocks api", "growtopia"],
