@@ -68,12 +68,17 @@ router.get("/", async (req, res) => {
 user._name;
 user._email;
 user._growid;
+user._id;
+user._balance;
 
 // Methods
 user.getName();
 user.getEmail();
 user.hasGrowID();
 user.getGrowID();
+user.hasBalance();
+user.getBalance();
+user.getID();
 
 ```
 

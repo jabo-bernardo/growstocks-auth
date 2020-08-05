@@ -42,7 +42,7 @@ class GrowStocksOAuth {
             ip: ip
         });
         if(!data.success) return { success: false, response: data.reason };
-        return { success: true, response: new GrowStocksUser(data.user.name, data.user.email, data.user.growid) };
+        return { success: true, response: new GrowStocksUser(data.user.name, data.user.email, data.user.growid, data.user.id, data.user.balance) };
     }
 
 }

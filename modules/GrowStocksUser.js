@@ -6,10 +6,12 @@ class GrowStocksUser {
      * @param {String} email 
      * @param {String} growid 
      */
-    constructor(name, email, growid) {
+    constructor(name, email, growid, id, balance = null) {
         this._name = name;
         this._email = email;
         this._growid = growid;
+        this._id = id;
+        this._balance = balance;
     }
 
     /**
@@ -40,6 +42,36 @@ class GrowStocksUser {
      */
     getEmail() {
         return this._email;
+    }
+
+    /**
+     * 
+     * Gets the user's GrowStocks ID
+     * 
+     * @returns Number
+     */
+    getID() {
+        return this._id;
+    }
+
+    /**
+     * 
+     * Gets the user's balance
+     * 
+     * @returns Number
+     */
+    getBalance() {
+        return this._balance;
+    }
+
+    /**
+     * 
+     * Checks if the user has GS Pay Scope
+     * 
+     * @returns Boolean
+     */
+    hasBalance() {
+        return this._balance != null;
     }
 
     /**
